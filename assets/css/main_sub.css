@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+div.event-banners-bg{
+	position:inherit;
+	z-index:10;
+}
+div.event_banners {
+    height: 250px;
+    width: 1200px;
+}
+/*Orta Banner*/
+div.main-section {
+    max-height: 515px;
+	padding:40px -1px 0px 0px;
+    margin:40px 0px 0px 160px;
+    max-width: 995px;
+}
+
+ul.sub-section {
+	list-style-type: none;
+	width: 200px;
+	height: 300px;
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	overflow: hidden;
+	padding-top: 0px;
+}
+
+li.sub-banner {
+	padding:0px 0px 0px 0px;
+    height: 80px;
+    width: 200px;
+ 	font-size:0;
+	line-height:0px;
+}
+
+
+
+table.tableTitle {
+    font-size: 12px;
+    line-height: 20px;
+	width: 100%;
+	margin:0 auto;
+}
+	table.tableTitle {font-size:14px;
+		font-weight:bold;
+	}
+	table.tableTitle th.karus{
+		color:#b90000;
+		width: 50%;
+	}
+	table.tableTitle th.elmorad {
+		color:#bc4504;
+		width: 50%;
+	}
+
+	table.tableTitle th.war-subtitle {
+		color:#ff9933;
+		width:25%;
+	}
+
+table.tableRank {color: #FFFFFF;
+    font-size: 12px;
+    line-height: 20px;
+	width:500px;
+	margin:0 auto;
+}
+
+table.tableRank td {color: #FFFFFF;
+    padding:2px 30px;
+}
+	table.tableRank td span.rank-number {margin:0 5px 0; display:inline-block; width:18px; font-weight:bold; text-align:center;}
+		table.tableRank td span.karus-rank-number {background-color:#710000;}
+		table.tableRank td span.elmorad-rank-number {background-color:#e65b00;}
+	table.tableRank td span.num {display:inline-block; width:110px;}
+
+div.rankwar {font-size:12px;}
+ul.rank_karuslist, ul.rank_elmoradlist {float:left; color:#ffffff; padding:0; list-style-type:none; width:50%;}
+	ul li.rank_li span {width:50%; display:inline-block; text-align:center;}
+
+
+table.karus
+{
+	color:#ffffff;
+	font-size:12px;
+	line-height:20px;
+	float:left;
+	padding:0 50px;
+	width:250px;
+}
+table.karus th {
+	color:#b90000;
+	font-size:14px;
+	font-weight:bold;
+}
+
+table.elmorad
+{
+	color:#ffffff;
+	font-size:12px;
+	line-height:20px;
+	float:left;
+	padding:0 50px;
+	width:250px;
+}
+table.karus td.number {
+
+	width:20px;
+	text-align:center;
+}
+table.elmorad td.number {
+	
+	width:20px;
+	text-align:center;
+}
+table.elmorad th {
+	color:#bc4504 ;
+	font-size:14px;
+	font-weight:bold;
+}
+div.rank_location {
+	color:#ffffff;
+	font-size:10px;
+	margin-top:-15px;
+}
+
+div.vertical-lotation-middle{
+	width: 200px;
+	height: 102px;
+	border: 1px solid white;
+	position: absolute;
+	top: 152px;
+	left: 952px;
+	visibility: visible;
+}
