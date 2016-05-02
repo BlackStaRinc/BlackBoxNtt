@@ -2,7 +2,7 @@
 document.domain="nttgame.com";
 
 // Set global variables for JS ...
-var _imageRoot = "/assets/images/";
+var _imageRoot = "/assets/img/";
 var _host = location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '');
 
 function base64_encode (data) {
@@ -106,48 +106,3 @@ function getCookie(name) {
 
 	return "";
 }
-
-var _clientDownload = function(_n){
-        var login = '';
-        try{
-            login = _login;
-        }catch(e){
-            login = '';
-        }
-        if(_login == ''){
-            alert("Please login.");
-            var returnurl = base64_encode(_SITE_URL + "/download/client/");
-            openLogin(returnurl);
-        }else{
-            
-                if(_n == 1){
-                    var url='http://filegate.nttgame.com/knight/client/usko/KnightOnlineSetup_v1977.exe.torrent';
-                }else if(_n == 2){
-                    var url='http://filegate.nttgame.com/knight/client/usko/fansitekit/fansite_kit_v1.zip';
-                }else{
-                    var url='http://clientdownload.nttgame.com/knight/client/usko/KnightOnlineSetup_v2025.exe';
-                }
-                ga('send','event', 'Knight', 'Download', 'direct');
-                var result='';
-                $.ajax({
-                        type: "GET",
-                        url: "/download/client_count/",
-                        data: {'n': _n},
-                        cache: false,
-                        success: function(data){
-                                var result = $.trim(data);
-                                if(result == '0') {
-                                        location.href=url;
-                                } else{
-                                        alert("You cannot download client installer. Please ask to Administrator.");
-                                } 
-                        },
-                        error: function (xhr, ajaxOptions, thrownError) {
-                            alert(xhr.status);
-                            alert(thrownError);
-                        }
-                });			
-
-                return false;	
-        }
-};

@@ -1,18 +1,6 @@
 @charset "utf-8";
 
-body {
-	background-image:url(../img/tumblr_static_stars-artwork-galaxy-1920x1080.jpg);
-	background-position:center;
-	}
 
-div.container {
-	position:relative;
-	width:1100px;
-	height:1200px;
-	left:50%;
-	margin:0 -550px;
-
-}
 .events {
 	position:absolute; 
 	width:1100px;
@@ -40,15 +28,7 @@ dd.thumb {
 	float:left;
 	margin-left:-10px;
 }
-div.contents {
-	/*z-index:100;*/
-	background:rgba(77,197,255,0.1);
-	width:1100px;
-	height:905px;
-	float:center;
-	margin:0 auto;
-	
-}
+
 div.banner {
 	margin:0 auto;
 	height:315px;
@@ -64,31 +44,7 @@ aside.right_side {
 	margin:15px 75px 0 0;
          font-size:1px;line-height:0;
 }
-.fbPluginContainer {
-    width:179px;
-	height:350px;
-    margin:0 0 5px 0;padding:0;
-    overflow:hidden;
-}
-.b627aad {
-	color:#627aad;
-	font-weight:bold;
 
-}
-table.facebook_thumbs {
-	width:140px;
-	height:90px;
-	margin:5px 10px 3px 27px;
-}
-div.facebook p {
-	margin:0;
-    padding:0 15px 0px 15px;
-    line-height:20px; 
-	color:#ffffff;
-	font-size:10px;
-    /*position:relative;*/
-    top:-16px;
-}
 section.main_content {
 	width:520px;
 	float:left;
@@ -96,43 +52,6 @@ section.main_content {
 	margin: 40px 10px 0 35px;
 }
 
-
-/*tab style start*/
-th.main_date {
-	width:50px;
-}
-.tab-box { 
-  border-bottom:1px solid #ffffff;
-  width:480px;
-  padding-bottom:5px;
-  padding-left:35px;
-}
-.tab-box a {
-  border-top: 1px solid #ffffff;
-  border-right: 1px solid #ffffff;
-  border-left: 1px solid #ffffff;
-  color:#ffffff;
-  padding: 5px 15px;
-  text-decoration:none;
-  background-color: #000;
-  font-size:12px;
-  font-weight:bold;
-}
-.tab-box a.activeLink { 
-  background-image:url(http://filegate.nttgame.com/knight/images/131218/tab_bg.png);
-  background-repeat:repeat-x;
-  border-bottom: 0; 
-  padding: 6px 15px;
-  color:#ffffff;
-  font-weight:bold;
-  font-size:12px;
-}
-.tabcontent { 
-/*border-top: 1px solid #ddd; 
-border-top: 0; */
-color:#ffffff;
-width:520px;
-}
 .hide { 
   display: none;
  }
@@ -153,45 +72,8 @@ span.dategrey {
 	font-size:12px;
 
 }
-table.social {
-	margin-top:-10px;
-}
-table.tabtext{
-	margin-top:7px;
-	width:100px;
-}
-table.tabtext td {
-	padding:0p;
-	border:0;
-	border-collapse:collapse;
-}
 
-table.tabtext td.title {
-	width:375px;
-	font-size:14px;
-}        
-table.tabtext td.table_line {
-text-align:center;
 
-line-height:1px;
-}
-table.tabtext a:hover {
-	color:#999999;
-}
-table.tabtext a {
-	text-decoration:none;
-	color:#ffffff;
-	font-size:14px;
-}
-
-article.announcement {
-	margin-top:80px;
-	margin-left:400px;
-	height:310px;
-}
-article.rank {
-
-}
 div.more_main {
 	margin-top:10px;
 	margin-left:475px;
