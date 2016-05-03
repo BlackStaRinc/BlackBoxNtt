@@ -100,7 +100,7 @@ a:hover {
 .dropdown-content3 {
 	border-radius:20px;
 	z-index:10;
-	padding-left:2px;
+	padding-left:3px;
     display:none;
     position:relative;
     background-color:rgba(22, 145, 190,1);
@@ -110,7 +110,7 @@ a:hover {
 .dropdown-content4 {
 	border-radius:20px;
 	z-index:10;
-	padding-left:2px;
+	padding-left:3px;
     display:none;
     position:relative;
     background-color:rgba(22, 107, 162,1);
