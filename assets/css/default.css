@@ -39,7 +39,7 @@ div.contents {
 	position:relative;
 	background:rgba(77,197,255,0.1);
 	width:1300px;
-	height:1100px;
+	height:auto;
 	float:center;
 	margin:0 auto;
 

@@ -126,10 +126,10 @@
 					</ul>
 
 			</nav>
+            
 	<form action="kayit.php" method="post" target="_blank">
 	<div class="Table">
     <div class="Title">
-        <p>This is a Table</p>
     </div>
     <div class="Heading">
         <div class="Cell">
@@ -156,43 +156,63 @@
             <p><input type="text" name="oneri" /></p>
         </div>
     </div>
-    <div class="Row">
+    
+    	<div class="Row">
         <div class="Cell">
-            <p>Degerlendirme</p>
+		<p>Degerlendirme</p>
         </div>
         <div class="Cell">
-	<p><div class="rating-wrapper">
-  <input type="radio" class="rating-input" id="rating-input-1-5" name="1" />
-  <label for="rating-input-1-5" class="rating-star"></label>
-  <input type="radio" class="rating-input" id="rating-input-1-4" name="2" />
-  <label for="rating-input-1-4" class="rating-star"></label>
-  <input type="radio" class="rating-input" id="rating-input-1-3" name="3" />
-  <label for="rating-input-1-3" class="rating-star"></label>
-  <input type="radio" class="rating-input" id="rating-input-1-2" name="4" />
-  <label for="rating-input-1-2" class="rating-star"></label>
-  <input type="radio" class="rating-input" id="rating-input-1-1" name="5" />
-  <label for="rating-input-1-1" class="rating-star"></label>
-  </div></p>
+	  <p>
+      <div class="rating-wrapper">
+      <input type="radio" class="rating-input" id="rating-input-1-5" name="1" />
+      <label for="rating-input-1-5" class="rating-star"></label>
+      <input type="radio" class="rating-input" id="rating-input-1-4" name="2" />
+      <label for="rating-input-1-4" class="rating-star"></label>
+      <input type="radio" class="rating-input" id="rating-input-1-3" name="3" />
+      <label for="rating-input-1-3" class="rating-star"></label>
+      <input type="radio" class="rating-input" id="rating-input-1-2" name="4" />
+      <label for="rating-input-1-2" class="rating-star"></label>
+      <input type="radio" class="rating-input" id="rating-input-1-1" name="5" />
+      <label for="rating-input-1-1" class="rating-star"></label>
+      </div></p>
         </div>
         </div>
+        
         <div class="Row">
         <div class="Cell">
-        <input type="submit">
         </div> 
         <div class="Cell">
+        <input type="submit">
         </div>
         </div>
+        
         <div class="Row">
         <div class="Cell">
             <p>Oneri</p>
         </div>
         <div class="Cell">
-            <p><input type="text" name="oneri" /></p>
+            <p>
+			<?php
+			include "Oku.php"; 
+			?></p>
         </div>
-    </div>
+    	</div>
+    
 </form>
-     </div>
-</div>
+       <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/tr_TR/sdk.js#xfbml=1&version=v2.6";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+            
+            <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+            <div class="fb-xfbml-parse-ignore">
+    <blockquote cite="https://www.facebook.com/facebook"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div>																													   	</div>     
+	</div>
+	</div>
 </body>
 
 </html>
