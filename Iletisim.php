@@ -11,9 +11,9 @@
 <link rel="icon" href="assets/img/logo16.png" type="image/x-icon">
 <link rel="shortcut icon" href="assets/img/logo16.png" type="image/x-icon">
 <!-- CSS -->
-<link href="assets/css/component.css" rel="stylesheet" type="text/css">
 <link href="assets/css/default.css" rel="stylesheet" type="text/css">
 <link href="assets/css/common.css" rel="stylesheet" type="text/css">
+<link href="assets/css/component.css" rel="stylesheet" type="text/css">
 
 <!-- JS -->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -26,12 +26,12 @@
 </head>
 
 	<body>
-     
-	<div class="contents"> <div style="text-align:right; margin-right:35px"/>	
+     <div class="contents">
+	
+   <div style="text-align:right; margin-right:35px"/>	
 <button title="Search" name="search" style="border-radius:100px;width:30px; height:30px; background-image:url(assets/img/Search.png); background-position:center"></button>
-		<div class="container">	
-  		
-    				<!-- Codrops top bar -->
+<div class="container">	
+		
           <br>
 				<nav id="menu" class="nav">					
 					<ul>
@@ -126,34 +126,74 @@
 					</ul>
 
 			</nav>
-<div class="css-slideshow">
-    <figure>
-        <img src="flags/world-flags-immigration-slide.jpg" alt="class-header-css3" width="495" height="370" class="alignnone size-full wp-image-172" /><figcaption><strong>CSS3:</strong> CSS3 delivers a wide range of stylization and effects, enhancing the web app without sacrificing your semantic structure or performance. Additionally Web Open Font Format (WOFF) provides typographic flexibility and control far beyond anything the web has offered before.</figcaption> 
-    </figure>
-    <figure>
-        <img src="flags/Immigration_-_Flags_of_the_world.jpg" alt="class-header-semantics" width="495" height="370" class="alignnone size-full wp-image-179" /><figcaption><strong>Semantics:</strong> Giving meaning to structure, semantics are front and center with HTML5. A richer set of tags, along with RDFa, microdata, and microformats, are enabling a more useful, data driven web for both programs and your users.</figcaption> 
-    </figure>
-    <figure>
-        <img src="flags/kelime_cifti_03.png" alt="class-header-offline" width="495" height="370" class="alignnone size-large wp-image-178" /><figcaption><strong>Offline &amp; Storage:</strong> Web Apps can start faster and work even if there is no internet connection, thanks to the HTML5 App Cache, as well as the Local Storage, Indexed DB, and the File API specifications.</figcaption> 
-    </figure>
-    <figure>
-        <img src="flags/Wp/depositphotos_10473899-Country-Flags-with-World-Map.jpg" alt="class-header-device" width="495" height="370" class="alignnone size-full wp-image-177" /><figcaption><strong>Device Access:</strong> Beginning with the Geolocation API, Web Applications can present rich, device-aware features and experiences. Incredible device access innovations are being developed and implemented, from audio/video input access to microphones and cameras, to local data such as contacts &amp; events, and even tilt orientation.</figcaption> 
-    </figure>
-<figure>
-        <img src="flags/Flag+of+turkey.png" alt="class-header-connectivity" width="495" height="370" class="alignnone size-large wp-image-176" /><figcaption><strong>Connectivity:</strong> More efficient connectivity means more real-time chats, faster games, and better communication. Web Sockets and Server-Sent Events are pushing (pun intended) data between client and server more efficiently than ever before.</figcaption> 
-    </figure>
-    <figure>
-        <img src="flags/Flag_of_Canada.png" alt="class-header-multimedia" width="495" height="370" class="alignnone size-large wp-image-175" /><figcaption><strong>Multimedia:</strong> Audio and video are first class citizens in the HTML5 web, living in harmony with your apps and sites. Lights, camera, action!</figcaption> 
-    </figure>
-    <figure>
-        <img src="flags/rusya-bayrak-yuvarlak-png.png" alt="class-header-3d" width="495" height="370" class="alignnone size-large wp-image-174" /><figcaption><strong>3D, Graphics &amp; Effects:</strong> Between SVG, Canvas, WebGL, and CSS3 3D features, you're sure to amaze your users with stunning visuals natively rendered in the browser.</figcaption> 
-    </figure>
-    <figure>
-        <img src="flags/1.jpg" alt="class-header-performance" width="495" height="370" class="alignnone size-large wp-image-173" /><figcaption><strong>Performance &amp; Integration:</strong> Make your Web Apps and dynamic web content faster with a variety of techniques and technologies such as Web Workers and XMLHttpRequest 2. No user should ever wait on your watch.</figcaption> 
-    </figure>
-  </div>  
-       	</div>         
+	<form action="kayit.php" method="post" target="_blank">
+	<div class="Table">
+    <div class="Title">
+        <p>This is a Table</p>
+    </div>
+    <div class="Heading">
+        <div class="Cell">
+            <p>Ad Soyad</p>
+        </div>
+        <div class="Cell">
+            <p><input type="text" name="ad"/></p>
+        </div>
+        
+    </div>
+    <div class="Row">
+        <div class="Cell">
+            <p>Yorum</p>
+        </div>
+        <div class="Cell">
+            <p><input type="text" name="yorum"/></p>
+        </div>
+    </div>
+    <div class="Row">
+        <div class="Cell">
+            <p>Oneri</p>
+        </div>
+        <div class="Cell">
+            <p><input type="text" name="oneri" /></p>
+        </div>
+    </div>
+    <div class="Row">
+        <div class="Cell">
+            <p>Degerlendirme</p>
+        </div>
+        <div class="Cell">
+	<p><div class="rating-wrapper">
+  <input type="radio" class="rating-input" id="rating-input-1-5" name="1" />
+  <label for="rating-input-1-5" class="rating-star"></label>
+  <input type="radio" class="rating-input" id="rating-input-1-4" name="2" />
+  <label for="rating-input-1-4" class="rating-star"></label>
+  <input type="radio" class="rating-input" id="rating-input-1-3" name="3" />
+  <label for="rating-input-1-3" class="rating-star"></label>
+  <input type="radio" class="rating-input" id="rating-input-1-2" name="4" />
+  <label for="rating-input-1-2" class="rating-star"></label>
+  <input type="radio" class="rating-input" id="rating-input-1-1" name="5" />
+  <label for="rating-input-1-1" class="rating-star"></label>
+  </div></p>
+        </div>
+        </div>
+        <div class="Row">
+        <div class="Cell">
+        <input type="submit">
+        </div> 
+        <div class="Cell">
+        </div>
+        </div>
+        <div class="Row">
+        <div class="Cell">
+            <p>Oneri</p>
+        </div>
+        <div class="Cell">
+            <p><input type="text" name="oneri" /></p>
+        </div>
+    </div>
+</form>
      </div>
-
+</div>
 </body>
+
 </html>
+	

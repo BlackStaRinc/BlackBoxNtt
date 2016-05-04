@@ -1,3 +1,35 @@
+.rating-wrapper {
+  overflow: hidden;
+  position:absolute;
+  z-index:-10;
+  }
+
+.rating-input {
+  position:inherit;
+  top: -50px;
+}
+
+.rating-star:hover,
+.rating-star:hover ~ .rating-star {
+  background-position: 0 0;
+}
+
+.rating-wrapper:hover .rating-star:hover,
+.rating-wrapper:hover .rating-star:hover ~ .rating-star,
+.rating-input:checked ~ .rating-star {
+  background-position: 0 0;
+}
+
+.rating-star,
+.rating-wrapper:hover .rating-star {
+  float:right;
+  display:compact;
+  width: 16px;
+  height: 16px;
+  background: url('http://css-stars.com/wp-content/uploads/2013/12/stars.png') 0 -16px;
+}
+
+
 .css-slideshow{
   z-index:-10;
   position: relative;
@@ -84,3 +116,38 @@ figure:nth-child(8) {
       opacity:1;
    }
 }
+.Table
+    {
+		z-index:0;
+		position:absolute;
+        display: table;
+		margin:150px 0px 200px 400px;
+    }
+    .Title
+    {
+        display: table-caption;
+        text-align: center;
+        font-weight: bold;
+        font-size:larger;
+    }
+    .Heading
+    {
+        display: table-row;
+        font-weight: bold;
+        text-align: center;
+    }
+    .Row
+    {
+        display: table-row;
+		text-align:center;
+
+    }
+    .Cell
+    {
+        display: table-cell;
+        border: solid;
+        border-width:thin;
+		border-color:rgba(6,173,255,1.00);
+        padding-left: 0px;
+        padding-right: 0px;		
+    }
