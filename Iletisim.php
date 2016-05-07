@@ -24,16 +24,12 @@
 
 
 </head>
-
 	<body>
-     <div class="contents">
-	
-   <div style="text-align:right; margin-right:35px"/>	
-<button title="Search" name="search" style="border-radius:100px;width:30px; height:30px; background-image:url(assets/img/Search.png); background-position:center"></button>
-<div class="container">	
-		
-          <br>
-				<nav id="menu" class="nav">					
+    
+      <div class="container">	
+      <header><h2>Nationalities and Countries</h2></header>
+        	<div class="contents"> 
+				<nav  class="nav">					
 					<ul>
 						<li>
                         <div class="dropdown">

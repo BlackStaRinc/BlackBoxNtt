@@ -30,7 +30,6 @@
 
 
 .css-slideshow{
-  z-index:-10;
   position: relative;
   max-width: 495px;
   height: 370px;
@@ -122,7 +121,7 @@ figure:nth-child(8) {
         display: table;
 		left: 0;
 		right: 0;
-		top: 15%;
+		top: 15em;
 		margin-left:auto;
 		margin-right: auto;
     }
@@ -165,30 +164,56 @@ figure:nth-child(8) {
 	margin-top:10em;
 	padding: 0px 10px 0px 5px;
 	position: relative;
+	z-index:1;
 	color: #fff;
-	background-color: rgba(93,6,108,0.3);
-	border: 1px solid purple;
+	background-color: rgba(0,0,0,0.6);
+	border:1px solid rgba(55,0,94,0.9);
 	height: 300px;
 	width: 1100px;
 }
-.image-div .image{position:absolute;}
-.image-div .image img{position:relative;background:none repeat scroll 0 0 transparent;padding:0px 0px 0px 0px;border: 1px solid purple;margin: 10px 0 0 0;}
-.image-div .image-div-content{position: absolute; height:100px; width:800px;padding: 0px 25px;margin: 0px 0px 0px 0px; color:#fff;}
-.image-div .image-div-content .row{margin:px 0px 0px 0px;padding: 0px 0px 0px 0px;position:relative;}
+.image-div .image{position:absolute;
+}
+.image-div .image img{
+	position:relative;
+	background:none repeat scroll 0 0 transparent;
+	padding:0px 0px 0px 0px;
+	border: 1px solid rgba(55,0,94,1);
+	margin: 10px 0 0 0;
+}
+.image-div .image-div-content{
+	position: absolute;
+	height:100px;
+	width:800px;
+	padding:25px 0px 0px 40px;
+	margin: 0px 0px 0px 0px; 
+	color:#fff;
+}
+.image-div .image-div-content .row{
+	margin:px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	position:relative;
+	}
 
 .konu{
-	margin-right:0px;	margin-left:0px;	margin-bottom:0px;	margin-top:5em;
-	padding: 0px 10px 0px 0px;
+	margin-right:0px;
+	margin-left:0px;
+	margin-bottom:0px;
+	margin-top:5em;
+	padding: 0px 0px 0px 0px;
 	position: relative;
 	color: #fff;
-	background-color: rgba(123,6,108,0.5);
-	border:solid 1px rgba(255,8,27,1.00);
+	background:rgba(0,0,0,0.8);
+	border:solid 1px rgba(55,0,94,1);
 	height:auto;
 	width: 1100px;
-	z-index:-1;
+
 }
-.konu .image{position:absolute;}
+.konu .image{
+	position:absolute;
+}
 .konu .image img{
-position:relative;background:none repeat scroll 0 0 transparent;
-padding:0px 5px 0px 0px;margin: 5px 0px 0px 0px; 
+	position:relative;
+	background:none repeat scroll 0 0 transparent;
+	padding:0px 5px 0px 0px;
+	margin: 5px 0px 0px 0px; 
 }
