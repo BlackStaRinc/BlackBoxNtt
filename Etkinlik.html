@@ -6,6 +6,7 @@
 
 #cross{
 	text-align: center;
+	font-weight:bolder;
 	width:30px;
 	height:30px;
 	margin: 0;
@@ -25,6 +26,7 @@ tr{
 td{
 	height: 30px;
 	width: 30px;
+	
 }
 #leftBox{
 	float: left;
@@ -42,13 +44,17 @@ td{
 	margin: 0;
 	padding: 0;
 	border-collapse: collapse;
-	border: 1px solid blue;
+	border: 1px solid purple;
 }
 .inputBox{
 		width: 40px;
 		height:40px;
 		border: 1px solid purple;
 		text-align: center;
+		color:#fff;
+		font-weight:bold;
+		font-size:16px;
+		
 }
 #hintsTable{
 	width: 480px;
@@ -72,9 +78,9 @@ function initializeScreen(){
 			var cell = row.insertCell(-1);
 			if(rowData[j] != 0){
 				var txtID = String('txt' + '_' + i + '_' + j);
-				cell.innerHTML = '<input type="text" class="inputBox" maxlength="1" style="text-transform: lowercase" ' + 'id="' + txtID + '" onfocus="textInputFocus(' + "'" + txtID + "'"+ ')">';
+				cell.innerHTML = '<input type="text" class="inputBox" maxlength="1" style="text-transform:lowercase; color:rgba(0,0,0,1.00)" ' + 'id="' + txtID + '" onfocus="textInputFocus(' + "'" + txtID + "'"+ ')">';
 			}else{
-				cell.style.backgroundColor  ='gray';
+				cell.style.backgroundImage = 'url(assets/img/back2.jpg)';
 			}
 		}
 	}
@@ -138,10 +144,10 @@ function checkClicked(){
 			if(rowData[j] != 0){
 				var selectedInputTextElement = document.getElementById('txt' + '_' + i + '_' + j);
 				if(selectedInputTextElement.value != puzzelArrayData[i][j]){
-					selectedInputTextElement.style.backgroundColor = 'red';
+					selectedInputTextElement.style.backgroundColor = 'rgba(255,0,0,1.00)';
 					
 				}else{
-					selectedInputTextElement.style.backgroundColor = 'green';
+					selectedInputTextElement.style.backgroundColor = 'rgba(0,255,0,1.00)';
 				}
 			}
 		}
@@ -208,7 +214,7 @@ function solveClicked(){
 	<tr><td><input class="butt"  type="submit" value="Clear All" onclick="clearAllClicked()"></td>
 	<td><input class="butt"  type="submit" value="Check" onclick="checkClicked()"></td>
 	<td><input class="butt"  type="submit" value="Solve" onclick="solveClicked()"></td>
-	<td><input class="butt"  type="submit" value="Clue" onclick="clueClicked()"></td></tr>
+	</tr>
 </table>
 </div>
 <table id="hintsTable">
@@ -216,13 +222,29 @@ function solveClicked(){
 			<td><strong>Horizontal:</strong></td><td><strong>Vertical:</strong></td>
 		</tr>
 		<tr>
-			<td>3. Cultural Hub (Hyderabad)</td><td>1. Education Hub (Pune)</td>
+			<td>2.<img src="/assets/img/etkinlik/italy.png" width="30px" height="30px"></td><td>1.<img src="/assets/img/etkinlik/poland.png" width="30px" height="30px"></td>
 		</tr>
 		<tr>
-			<td>5. India's financial capital (Mumbai)</td><td>2. Information Technology Hub (Bangalore)</td>
+			<td>4.<img src="/assets/img/etkinlik/germany.png" width="30px" height="30px"></td><td>3.<img src="/assets/img/etkinlik/turkey.png" width="30px" height="30px"></td>
 		</tr>
 		<tr>
-			<td>6. Saffron region (Kashmir)</td><td>4. Capital of India (Delhi)</td>
-            </tr></table>
+			<td>6.<img src="/assets/img/etkinlik/greece.png" width="30px" height="30px"></td><td>5.<img src="/assets/img/etkinlik/england.png" width="30px" height="30px"></td>
+            </tr>
+        <tr>
+			<td>8.<img src="/assets/img/etkinlik/australia.png" width="30px" height="30px"></td><td>7.<img src="/assets/img/etkinlik/canada.png" width="30px" height="30px"></td>
+		</tr>    
+        <tr>
+			<td>9.<img src="/assets/img/etkinlik/spain.png" width="30px" height="30px"></td><td>10.<img src="/assets/img/etkinlik/russia.png" width="30px" height="30px"></td>
+		</tr>    
+        <tr>
+			<td>12.<img src="/assets/img/etkinlik/japan.png" width="30px" height="30px"></td><td>11.<img src="/assets/img/etkinlik/france.jpg" width="30px" height="30px"></td>
+		</tr>    
+        <tr>
+			<td>14.<img src="/assets/img/etkinlik/china.png" width="30px" height="30px"></td><td>13.<img src="/assets/img/etkinlik/america.png" width="30px" height="30px"></td>
+		</tr>    
+        <tr>
+			<td></td><td>15.<img src="/assets/img/etkinlik/brazil.png" width="30px" height="30px"></td>
+		</tr>    
+        </table>
 </body>
 </html>

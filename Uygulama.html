@@ -1,0 +1,389 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="content-script-type" content="text/javascript">
+<title>Nationalities and Countries | CET302</title>
+
+<link rel="icon" href="assets/img/logo16.png" type="image/x-icon">
+<link rel="shortcut icon" href="assets/img/logo16.png" type="image/x-icon">
+<!-- CSS -->
+<link href="assets/css/component.css" rel="stylesheet" type="text/css">
+<link href="assets/css/default.css" rel="stylesheet" type="text/css">
+<link href="assets/css/common.css" rel="stylesheet" type="text/css">
+
+<!-- JS -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+
+<script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
+
+</head>
+<style>
+
+#cross{
+	position:relative;
+	z-index:1;
+	text-align: center;
+	font-weight:bolder;
+	width:30px;
+	height:30px;
+	margin: 0;
+	border-collapse: collapse;
+	border: 1px solid rgba(99,0,158,1.00);
+}
+#buttons{
+	position:relative;
+	z-index:1;
+	width:30%;
+	float: right;
+}
+tr{
+	position:relative;
+	z-index:1;
+	border-collapse: collapse;
+}
+td{
+	position:relative;
+	z-index:1;
+	height: 30px;
+	width: 30px;
+}
+#leftBox{
+	position:absolute;
+	z-index:1;
+	float: left;
+	padding:200px 0px 0px 200px;
+}
+#rightBox{
+	position:absolute;
+	z-index:1;
+	margin-left:45px;
+	background:rgba(0,0,0,0.5);
+	border:1px solid rgba(99,0,158,1.00);
+}
+.butt{
+	position:relative;
+	z-index:1;
+	background:rgba(7,120,255,1.00);
+	height:40px;
+	width: 100px;
+	margin:0px 0px 0px 0px;
+}
+#puzzel{
+	position:relative;
+	z-index:1;
+	text-align: center;
+	margin: 0;
+	border-collapse: collapse;
+	border: 1px solid rgba(99,0,158,1.00);
+}
+.inputBox{
+	position:relative;
+	z-index:1;
+	width: 40px;
+	height:40px;
+	border: 1px solid rgba(7,120,255,1.00);
+	text-align: center;
+	color:#fff;
+	font-weight:bold;
+	font-size:16px;
+		
+}
+#hintsTable{
+	margin-left:930px;
+	margin-top:200px;
+	border:1px solid rgba(99,0,158,1.00);
+	width: 150px;
+	position:absolute;
+		border-radius:20px;
+	z-index:1;
+}
+</style>
+<script>
+//Globals
+var currentTextInput;
+var puzzelArrayData;
+//Loads the Crossword
+function initializeScreen(){
+	var puzzelTable = document.getElementById("puzzel");
+	puzzelArrayData = preparePuzzelArray();
+	for ( var i = 0; i < puzzelArrayData.length ; i++ ) {
+		var row = puzzelTable.insertRow(-1);
+		var rowData = puzzelArrayData[i];
+		for(var j = 0 ; j < rowData.length ; j++){
+			var cell = row.insertCell(-1);
+			if(rowData[j] != 0){
+				var txtID = String('txt' + '_' + i + '_' + j);
+				cell.innerHTML = '<input type="text" class="inputBox" maxlength="1" style="text-transform:lowercase; color:rgba(0,0,0,1.00)" ' + 'id="' + txtID + '" onfocus="textInputFocus(' + "'" + txtID + "'"+ ')">';
+			}else{
+				cell.style.backgroundImage = 'url(assets/img/back2.jpg)';
+			}
+		}
+	}
+	addHint();
+}
+//Adds the hint numbers
+function addHint(){
+	document.getElementById("txt_0_11").placeholder = "1";
+	document.getElementById("txt_2_8").placeholder = "2";
+	document.getElementById("txt_2_9").placeholder = "3";
+	document.getElementById("txt_7_3").placeholder = "4";
+	document.getElementById("txt_7_4").placeholder = "5";
+	document.getElementById("txt_9_4").placeholder = "6";
+	document.getElementById("txt_11_2").placeholder = "7";
+	document.getElementById("txt_11_4").placeholder = "8";
+	document.getElementById("txt_12_0").placeholder = "9";
+	document.getElementById("txt_11_8").placeholder = "10";
+	document.getElementById("txt_9_12").placeholder = "11";
+	document.getElementById("txt_16_7").placeholder = "12";
+	document.getElementById("txt_14_10").placeholder = "13";
+	document.getElementById("txt_13_12").placeholder = "14";
+	document.getElementById("txt_11_16").placeholder = "15";
+}
+//Stores ID of the selected cell into currentTextInput
+function textInputFocus(txtID123){
+	currentTextInput = txtID123;
+}
+//Returns Array
+function preparePuzzelArray(){
+var items = [	[0,0,0,0,0,0,0,0,0,0,0,'p',0,0,0,0,0],
+				[0,0,0,0,0,0,0,0,0,0,0,'o',0,0,0,0,0],
+				[0,0,0,0,0,0,0,0,'i','t','a','l','y',0,0,0,0],
+				[0,0,0,0,0,0,0,0,0,'u',0,'a',0,0,0,0,0],
+				[0,0,0,0,0,0,0,0,0,'r',0,'n',0,0,0,0,0],
+				[0,0,0,0,0,0,0,0,0,'k',0,'d',0,0,0,0,0],
+				[0,0,0,0,0,0,0,0,0,'e',0,0,0,0,0,0,0],
+				[0,0,0,'g','e','r','m','a','n','y',0,0,0,0,0,0,0],
+				[0,0,0,0,'n',0,0,0,0,0,0,0,0,0,0,0,0],
+				[0,0,0,0,'g','r','e','e','c','e',0,0,'f',0,0,0,0],
+				[0,0,0,0,'l',0,0,0,0,0,0,0,'r',0,0,0,0],
+				[0,0,'c',0,'a','u','s','t','r','a','l','i','a',0,0,0,'b'],
+				['s','p','a','i','n',0,0,0,'u',0,0,0,'n',0,0,0,'r'],
+				[0,0,'n',0,'d',0,0,0,'s',0,0,0,'c','h','i','n','a'],
+				[0,0,'a',0,0,0,0,0,'s',0,'u',0,'e',0,0,0,'z'],
+				[0,0,'d',0,0,0,0,0,'i',0,'s',0,0,0,0,0,'i'],
+				[0,0,'a',0,0,0,0,'j','a','p','a','n',0,0,0,0,'l']];
+return items;
+}
+//Clear All Button
+function clearAllClicked(){
+	currentTextInput = '';
+	var puzzelTable = document.getElementById("puzzel");
+	puzzelTable.innerHTML = '';
+    initializeScreen();
+}
+//Check button
+function checkClicked(){
+	for ( var i = 0; i < puzzelArrayData.length ; i++ ) {
+		var rowData = puzzelArrayData[i];
+		for(var j = 0 ; j < rowData.length ; j++){
+			if(rowData[j] != 0){
+				var selectedInputTextElement = document.getElementById('txt' + '_' + i + '_' + j);
+				if(selectedInputTextElement.value != puzzelArrayData[i][j]){
+					selectedInputTextElement.style.backgroundColor = 'rgba(255,0,0,1.00)';
+					
+				}else{
+					selectedInputTextElement.style.backgroundColor = 'rgba(0,255,0,1.00)';
+				}
+			}
+		}
+	}
+}
+//Clue Button
+function clueClicked(){
+	if (currentTextInput != null){
+		var temp1 = currentTextInput;
+		var token = temp1.split("_");
+		var row = token[1];
+		var column = token[2];
+		document.getElementById(temp1).value = puzzelArrayData[row][column];
+		//checkClicked();
+	}
+}
+//Solve Button
+function solveClicked(){
+	if (currentTextInput != null){
+		var temp1 = currentTextInput;
+		var token = temp1.split("_");
+		var row = token[1];
+		var column = token[2];
+		
+		// Print elements on top
+		for(j = row; j >= 0; j--){
+			if(puzzelArrayData[j][column] != 0){
+				document.getElementById('txt' + '_' + j + '_' + column).value = puzzelArrayData[j][column];
+				}else break;
+		}
+		// Print elements on right
+		for(i = column; i< puzzelArrayData[row].length; i++){
+			if(puzzelArrayData[row][i] != 0){
+				document.getElementById('txt' + '_' + row + '_' + i).value = puzzelArrayData[row][i];
+				}else break;
+		}
+		
+		// Print elements below
+		for(m = row; m< puzzelArrayData.length; m++){
+			if(puzzelArrayData[m][column] != 0){
+				document.getElementById('txt' + '_' + m + '_' + column).value = puzzelArrayData[m][column];
+				}else break;
+		}
+		// Print elements on left
+		for(k = column; k >= 0; k--){
+			if(puzzelArrayData[row][k] != 0){
+				document.getElementById('txt' + '_' + row + '_' + k).value = puzzelArrayData[row][k];
+				}else break;
+		}
+		// Done!
+		
+	}
+}
+</script>
+	<body onload="initializeScreen()">
+    
+      <div class="container">	
+      <header><h2>Nationalities and Countries</h2></header>   
+        	<div class="contents"> 
+				<nav  class="nav">					
+					<ul>
+						<li>
+                        <div class="dropdown">
+							<a href="Home.html">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-home"></i>
+                                    </span>
+								<span>Ana Sayfa</span>
+                                </a>
+                             	</div>
+                            
+						</li>
+                  
+						<li>
+                        <div class="dropdown">
+                       		<a href="Konular.html">
+                         		<span class="icon">
+                         			 <i aria-hidden="true" class="icon-konular"></i> 
+                         			 </span>
+                           		<span>Konu Anlatım</span>
+                         	</a>
+                          <div class="dropdown-content2">
+                                   	<a href="#">Link 1</a>
+                                    <a href="#">Link 2</a>
+                                    <a href="#">Link 3</a>
+                                    </div>
+                               </div>
+						</li>
+						<li>
+                        <div class="dropdown">
+							<a href="Uygulama.html">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-uygulama"></i>
+								</span>
+								<span>Uygulama</span>
+							</a>
+                            <div class="dropdown-content3">
+                                   	<a href="#">Link 1</a>
+                                    <a href="#">Link 2</a>
+                                    <a href="#">Link 3</a>
+                                    </div>
+                               </div>
+						</li>
+                        
+						<li>
+                        <div class="dropdown">
+							<a href="Etkinlik.html">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-etkinlik"></i>
+								</span>
+								<span>Etkinlik</span>
+							</a>
+                            <div class="dropdown-content4">
+                                   	<a href="#">Link 1</a>
+                                    <a href="#">Link 2</a>
+                                    <a href="#">Link 3</a>
+                                    </div>
+                               </div>
+						</li>
+						<li>
+                        <div class="dropdown">
+							<a href="Galeri.html">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-galeri"></i>
+								</span>
+								<span>Galeri</span>
+							</a>
+                            <div class="dropdown-content5">
+                                   	<a href="#">Link 1</a>
+                                    <a href="#">Link 2</a>
+                                    <a href="#">Link 3</a>
+                                    </div>
+                              </div>
+						</li>
+						<li>
+                        <div class="dropdown">
+							<a href="Iletisim.php">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-iletisim"></i>
+								</span>
+								<span>İletişim</span>
+							</a>
+                            <div class="dropdown-content6">
+                                   	<a href="#">Link 1</a>
+                                    <a href="#">Link 2</a>
+                                    <a href="#">Link 3</a>
+                                    </div>
+                              </div>
+						</li>
+					</ul>
+
+			</nav>
+<div id="leftBox">
+<table id="puzzel">
+
+</table>
+</div>
+<div id="rightBox" style="margin-top:200px">
+<table>
+	<tr><td><input style="font-weight:bold" class="butt"  type="submit" value="Temizle" onclick="clearAllClicked()"></td></tr>
+	<tr><td><input style="font-weight:bold" class="butt"  type="submit" value="Kontrol" onclick="checkClicked()"></td></tr>
+	<tr><td><input style="font-weight:bold" class="butt"  type="submit" value="Çöz" onclick="solveClicked()"></td></tr>
+</table>
+</div>
+<table id="hintsTable" style="background-color:rgba(0,0,0,0.5)">
+		<tr>
+			<td><span style="font-size:22px">Yatay&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span style="font-size:22px">Dikey</span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size:20px">2:</span><img src="/assets/img/etkinlik/italy.png" width="30px" height="30px"></td><td><span style="font-size:20px">1:</span><img src="/assets/img/etkinlik/poland.png" width="30px" height="30px"></td>
+		</tr>
+		<tr>
+			<td><span style="font-size:20px">4:</span><img src="/assets/img/etkinlik/germany.png" width="30px" height="30px"></td><td><span style="font-size:20px">3:</span><img src="/assets/img/etkinlik/turkey.png" width="30px" height="30px"></td>
+		</tr>
+		<tr>
+			<td><span style="font-size:20px">6:</span><img src="/assets/img/etkinlik/greece.png" width="30px" height="30px"></td><td><span style="font-size:20px">5:</span><img src="/assets/img/etkinlik/england.png" width="30px" height="30px"></td>
+            </tr>
+        <tr>
+			<td><span style="font-size:20px">8:</span><img src="/assets/img/etkinlik/australia.png" width="30px" height="30px"></td><td><span style="font-size:20px">7:</span><img src="/assets/img/etkinlik/canada.png" width="30px" height="30px"></td>
+		</tr>    
+        <tr>
+			<td><span style="font-size:20px">9:</span><img src="/assets/img/etkinlik/spain.png" width="30px" height="30px"></td><td><span style="font-size:20px">10:</span><img src="/assets/img/etkinlik/russia.png" width="30px" height="30px"></td>
+		</tr>    
+        <tr>
+			<td><span style="font-size:20px">12:</span><img src="/assets/img/etkinlik/japan.png" width="30px" height="30px"></td><td><span style="font-size:20px">11:</span><img src="/assets/img/etkinlik/france.jpg" width="30px" height="30px"></td>
+		</tr>    
+        <tr>
+			<td><span style="font-size:20px">14:</span><img src="/assets/img/etkinlik/china.png" width="30px" height="30px"></td><td><span style="font-size:20px">13:</span><img src="/assets/img/etkinlik/america.png" width="30px" height="30px"></td>
+		</tr>    
+        <tr>
+			<td></td><td><span style="font-size:20px">15:</span><img src="/assets/img/etkinlik/brazil.png" width="30px" height="30px"></td>
+		</tr>    
+        </table>
+       	</div>         
+     </div>
+
+</body>
+</html>
