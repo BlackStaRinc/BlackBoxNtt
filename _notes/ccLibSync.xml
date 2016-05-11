@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<CCLibSyncEntry>
+
+  <syncentry adobeStockID="" creationTime="" elementRef="cloud-asset://cc-api-storage.adobe.io/assets/adobe-libraries/606b0ccf-7774-4c61-8a4b-adb3995cd223;node=37c24b1a-2602-401a-89cf-e7f16de2ad99" filename="Flag_of_Japan" formatType="5" height="256" isOptimized="FALSE" isUnlicensedStockAsset="FALSE" libraryName="606b0ccf-7774-4c61-8a4b-adb3995cd223" linkUpdateStatus="FALSE" localCCLibPath="C:\Users\hmz94\AppData\Roaming\Adobe\Creative Cloud Libraries\LIBS\6CA26A344E46C9B40A490D4D_AdobeID\creative_cloud\dcx\606b0ccf-7774-4c61-8a4b-adb3995cd223\components\2294f71e-1d28-4b85-b804-fd3e068483d2.png" localSitePath="C:\wamp\www\images\Flag_of_Japan.png" modifiedTime="1462526334133.000000" primaryType="image/png" siteName="Proje" type="" width="256"/>
+
+  <syncentry adobeStockID="" creationTime="" elementRef="cloud-asset://cc-api-storage.adobe.io/assets/adobe-libraries/606b0ccf-7774-4c61-8a4b-adb3995cd223;node=abc89ebc-390f-44e7-a435-4d8022ea88dd" filename="cn" formatType="5" height="256" isOptimized="FALSE" isUnlicensedStockAsset="FALSE" libraryName="606b0ccf-7774-4c61-8a4b-adb3995cd223" linkUpdateStatus="FALSE" localCCLibPath="C:\Users\hmz94\AppData\Roaming\Adobe\Creative Cloud Libraries\LIBS\6CA26A344E46C9B40A490D4D_AdobeID\creative_cloud\dcx\606b0ccf-7774-4c61-8a4b-adb3995cd223\components\d8dbb426-8046-4c77-ba4d-15758d2d2f7e.png" localSitePath="C:\wamp\www\images\cn.png" modifiedTime="1462526334087.000000" primaryType="image/png" siteName="Proje" type="" width="256"/>
+
+</CCLibSyncEntry>

@@ -196,13 +196,13 @@ figure:nth-child(8) {
 
 .konu{
 	margin-right:0px;
-	margin-left:0px;
+	margin-left:-1px;
 	margin-bottom:0px;
 	margin-top:5em;
-	padding: 0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
 	position: relative;
 	color: #fff;
-	background:rgba(0,0,0,0.8);
+	background:rgba(0,0,0,0.5);
 	border:solid 1px rgba(55,0,94,1);
 	height:auto;
 	width: 1100px;
@@ -215,5 +215,90 @@ figure:nth-child(8) {
 	position:relative;
 	background:none repeat scroll 0 0 transparent;
 	padding:0px 5px 0px 0px;
-	margin: 5px 0px 0px 0px; 
+	margin: 20px 0px 0px 0px; 
+}
+.s-slideshow{
+  position: relative;
+  max-width: 280px;
+  height: 280px;
+  margin: 0 0 0 0;
+}
+.s-slideshow figure{
+  margin: 0;
+  max-width: 280px;
+  height: 280px;
+  background: #000;
+  position: absolute;
+}
+.s-slideshow img{
+  box-shadow: 0 0 2px #666;
+}
+.s-slideshow figcaption{
+  position: absolute;
+  top: 0;
+  color: #fff;
+  background: rgba(0,0,0, .3);
+  font-size: .8em;
+  padding: 8px 12px;
+  opacity: 0;
+  transition: opacity .5s;
+}
+.s-slideshow:hover figure figcaption{
+  transition: opacity .5s;
+  opacity: 1;
+}
+.s-slideshow-attr{
+  max-width: 280px;
+  text-align: right;
+  font-size: .7em;
+  font-style: italic;
+  margin:0 auto;
+}
+.s-slideshow-attr a{
+  color: #666;
+}
+.s-slideshow figure{
+  opacity:0;
+}
+figure:nth-child(1) {
+  animation: xfade 40s 35s infinite;
+}
+figure:nth-child(2) {
+  animation: xfade 40s 30s infinite;
+}
+figure:nth-child(3) {
+  animation: xfade 40s 25s infinite;
+}
+figure:nth-child(4) {
+  animation: xfade 40s 20s infinite;
+}
+figure:nth-child(5) {
+  animation: xfade 40s 15s infinite;
+}
+figure:nth-child(6) {
+  animation: xfade 40s 10s infinite;
+}
+figure:nth-child(7) {
+  animation: xfade 40s 5s infinite;
+}
+figure:nth-child(8) {
+  animation: xfade 40s 0s infinite;
+}
+
+@keyframes xfade{
+   0%{
+      opacity: 0;
+   }
+   10.5% {
+      opacity:1;
+   }
+   12.5%{
+      opacity: 0;
+   }
+   98% {
+      opacity:0;
+   }
+   100% {
+      opacity:1;
+   }
 }
