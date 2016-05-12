@@ -31,14 +31,13 @@
 
 .css-slideshow{
   position: relative;
-  max-width: 495px;
-  height: 370px;
-  margin: 10em auto .5em auto;
+  width: 800px;
+  height: 500px;
+  margin: 10em 0px 0px 125px;
 }
 .css-slideshow figure{
-  margin: 0;
-  max-width: 495px;
-  height: 370px;
+  width: 800px;
+  height: 500px;
   background: #000;
   position: absolute;
 }
@@ -60,7 +59,8 @@
   opacity: 1;
 }
 .css-slideshow-attr{
-  max-width: 495px;
+  width: 800px;
+  height:500px;
   text-align: right;
   font-size: .7em;
   font-style: italic;
@@ -122,8 +122,6 @@ figure:nth-child(8) {
 		left: 0;
 		right: 0;
 
-		margin-left:auto;
-		margin-right: auto;
     }
     .Title
     {
@@ -137,21 +135,20 @@ figure:nth-child(8) {
         display: table-row;
         font-weight: bold;
         text-align: center;
+		
     }
     .Row
     {
         display: table-row;
 		text-align:center;
-
     }
     .Cell
     {
+		width:500px;
         display: table-cell;
         border:solid;
         border-width:thin;
-		border-color:rgba(6,173,255,1.00);
-        padding-left: auto;
-        padding-right: auto;		
+		border-color:rgba(152,0,209,1.00);	
     }
 
 
@@ -189,7 +186,7 @@ figure:nth-child(8) {
 	color:#fff;
 }
 .image-div .image-div-content .row{
-	margin:px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
 	padding: 0px 0px 0px 0px;
 	position:relative;
 	}
@@ -208,6 +205,7 @@ figure:nth-child(8) {
 	width: 1100px;
 
 }
+
 .konu .image{
 	position:absolute;
 }
@@ -301,4 +299,15 @@ figure:nth-child(8) {
    100% {
       opacity:1;
    }
+}
+.yorum{
+	margin-top:33.5em;
+	margin-left:198px;
+	position: relative;
+	z-index:1;
+	color: #fff;
+	background-color: rgba(0,0,0,0.6);
+	border:1px solid rgba(152,0,209,1.00);
+	height: auto;
+	width: 700px;
 }

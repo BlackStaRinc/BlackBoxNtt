@@ -13,7 +13,7 @@ if (!$conn) {
 		$ad = $_POST['ad'];
 		$yorum = $_POST['yorum'];
 		$oneri = $_POST['oneri'];
-		$deger = 3;
+		$deger = 5;
 	$kayit="INSERT INTO yorumlar(Id,Ad,Yorum,Oneri,Degerlendirme)VALUES('','$ad','$yorum','$oneri','$deger')";
 	if (mysqli_multi_query($conn, $kayit)) {
     echo "New records created successfully";

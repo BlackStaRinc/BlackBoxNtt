@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="tr">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
@@ -102,8 +102,7 @@
 							</a>
                             <div class="dropdown-content6">
                                    	<a href="https://www.facebook.com/Nationalities-And-Countries-977855832310159/?fref=ts" target="_blank">Facebook</a>
-                                    <a href="#">Youtube</a>
-                                    <a href="#">Twitter</a>
+                                    <a href="https://www.youtube.com/watch?v=TAKAkSt5bAk" target="_blank">Youtube</a>
                                     </div>
                               </div>
 						</li>
@@ -113,8 +112,10 @@
             
 	<form action="kayit.php" method="post" target="_blank">
 	
-    <div class="Table" style="padding-top:10em">
-	
+    <div class="Table" style="padding-top:10em; padding-left:13.2em">
+    
+	<div class="konu" style=" width:700px;">
+    <center><p>Değerlendirmede Bulunun</p></center>
     <div class="Row">
         <div class="Cell">
             <p>Ad Soyad</p>
@@ -161,22 +162,20 @@
       </div></p>
         </div>
         </div>
-        
-      <div class="Row">
-        <div class="Cell">
-        </div> 
-        <div class="Cell">
-        <input type="submit" value="Gönder">
-        </div>
-        </div>
+             <center> <input type="submit" value="Gönder"></center>
    </div>
-         
+   </div>
 </form> 
-      <div class="konu" style="margin-top:30em">
-			<?php
+      
+      
+  </div>
+  <br>
+  	<div class="yorum">
+  	<p style="text-align:center; border:1px solid rgba(152,0,209,1.00)">Bildirimde Bulunun</p>
+		<?php
 			include "Oku.php"; 
-			?>
-		</div>
+		?>
+	</div>
 </div>
 </div>
 </body>
