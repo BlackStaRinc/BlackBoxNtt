@@ -52,9 +52,9 @@
                            		<span>Konu Anlatım</span>
                          	</a>
                           <div class="dropdown-content2">
-                                   	<a href="Konu1.html"><span>Ülkeler ve Milliyetler</span></a>
+                                   	<a href="Konu1.html"><span>Ülkeler-Milliyetler</span></a>
                                     <a href="Konu2.html"><span>Türkiyenin Bölgeleri</span></a>
-                                    <a href="Konu3.html"><span>Ülkeler ve Başkentleri</span></a>
+                                    <a href="Konu3.html"><span>Ülkeler-Başkentleri</span></a>
                                     </div>
                                </div>
 						</li>
@@ -101,7 +101,7 @@
 								<span>İletişim</span>
 							</a>
                             <div class="dropdown-content6">
-                                   	<a href="#">Facebook</a>
+                                   	<a href="https://www.facebook.com/Nationalities-And-Countries-977855832310159/?fref=ts" target="_blank">Facebook</a>
                                     <a href="#">Youtube</a>
                                     <a href="#">Twitter</a>
                                     </div>
@@ -109,13 +109,13 @@
 						</li>
 					</ul>
 
-			</nav>
+			</nav>   
             
 	<form action="kayit.php" method="post" target="_blank">
-	<div class="Table">
-    <div class="Title">
-    </div>
-    <div class="Heading">
+	
+    <div class="Table" style="padding-top:10em">
+	
+    <div class="Row">
         <div class="Cell">
             <p>Ad Soyad</p>
         </div>
@@ -141,7 +141,7 @@
         </div>
     </div>
     
-    	<div class="Row">
+    <div class="Row">
         <div class="Cell">
 		<p>Degerlendirme</p>
         </div>
@@ -162,29 +162,23 @@
         </div>
         </div>
         
-        <div class="Row">
+      <div class="Row">
         <div class="Cell">
         </div> 
         <div class="Cell">
         <input type="submit" value="Gönder">
         </div>
         </div>
-        
-        <div class="Row">
-        <div class="Cell">
-            <p>Oneri</p>
-        </div>
-        <div class="Cell">
-            <p>
+   </div>
+         
+</form> 
+      <div class="konu" style="margin-top:30em">
 			<?php
 			include "Oku.php"; 
-			?></p>
-        </div>
-    	</div>
-    
-</form> 
-	</div>
-	</div>
+			?>
+		</div>
+</div>
+</div>
 </body>
 
 </html>

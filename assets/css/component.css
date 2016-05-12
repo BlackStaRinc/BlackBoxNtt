@@ -56,7 +56,7 @@ a, li {
 	padding: 0;
 	list-style: none;
 	font-size: 1.5em;
-	font-weight: 300;
+	font-weight: 100;
 }
 
 .nav li span {
@@ -69,7 +69,7 @@ a, li {
 	display: block;
 	z-index:10;
 	position:relative;
-	color: rgba(249, 249, 249, 1);
+	color: rgba(255,255,255,1);
 	height:100px;
 	text-decoration: none;
 	-webkit-transition: color .5s, background .5s, height .5s;
